@@ -1,7 +1,7 @@
 const Joi = require('joi');
 
-function errorResponse(res, message, status, details = null) {
-  return res.status(status).json({
+function errorResponse(res, message, statusCode, details = null) {
+  return res.status(statusCode).json({
     success: false,
     message,
     data: null,
